@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <a href="https://www.baidu.com">another page</a>
+    <script>
+      // success
+      // window.onbeforeunload = () => {
+      //   return undefined
+      // }
+      // fail
+      // window.addEventListener('beforeunload', event => {
+      //   return "There are unsaved changes. Leave now?"
+      // })
+      // success
+      window.addEventListener('beforeunload', event => {
+        event.returnValue = 1
+      })
+    </script>
+    <!--<script type="text/javascript" src="./index.js" async></script>-->
+</body>
+</html>
